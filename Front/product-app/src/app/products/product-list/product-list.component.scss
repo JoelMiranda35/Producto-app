@@ -1,0 +1,41 @@
+/* Centrar el título */
+.text-center {
+    text-align: center;
+}
+
+/*"Agregar Producto" */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem; 
+}
+
+/* Centrar la tabla */
+.table-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Separar los botones  */
+.actions {
+    display: flex;
+    align-items: center; 
+}
+
+/* Estilo para el botón de Editar */
+.actions button:first-child {
+    margin-right: 1rem; 
+}
+
+/* Eliminar */
+.actions button:last-child {
+    background-color: #ff0000 !important; 
+    border-color: #ff0000 !important; 
+    color: white !important; 
+}
+
+/*  "Agregar Producto" */
+.button-container button {
+    margin-bottom: 2rem; 
+}
+

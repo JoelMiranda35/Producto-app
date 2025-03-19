@@ -1,0 +1,60 @@
+/* Centrar el título */
+.text-center {
+    text-align: center;
+}
+
+/* Espacio entre el label y el input */
+.p-field label {
+    margin-bottom: 0.5rem; 
+    display: block; 
+    font-weight: bold; 
+}
+
+/* Estilo para los inputs */
+.p-field input {
+    width: 100%; 
+    padding: 0.5rem; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+}
+
+/* Espacio entre cada campo  */
+.p-field {
+    margin-bottom: 1.5rem; 
+}
+
+/* Estilo para el contenedor de los botones */
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Separa los botones */
+    gap: 1rem; /* Espacio entre los botones */
+    margin-top: 1rem; /* Espacio arriba de los botones */
+}
+
+/* Estilo base para los botones */
+.button-container button {
+    width: 120px; /* Ancho fijo para los botones */
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s, transform 0.2s; 
+}
+
+/* Efecto hover para los botones */
+.button-container button:hover {
+    transform: translateY(-1px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+}
+
+/* Botón "Volver" (Gris medio) */
+.p-button-secondary {
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+    color: white !important; 
+}
+
+/* Botón "Guardar"  */
+.p-button-success {
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+    color: white !important; 
+}

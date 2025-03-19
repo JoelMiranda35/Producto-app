@@ -1,0 +1,84 @@
+<div class="p-4">
+    <!-- Título centrado -->
+    <h1 class="text-center">{{ isEditMode ? 'Editar Producto' : 'Agregar Producto' }}</h1>
+    
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()" class="p-fluid">
+      <!-- Campo: Nombre -->
+      <div class="p-field">
+        <label for="name">Nombre</label>
+        <input
+          id="name"
+          type="text"
+          pInputText
+          formControlName="name"
+          placeholder="Ingrese el nombre del producto"
+          [ngClass]="{ 'p-invalid': productForm.get('name')?.invalid && productForm.get('name')?.touched }"
+        />
+        <small
+          *ngIf="productForm.get('name')?.invalid && productForm.get('name')?.touched"
+          class="p-error"
+        >
+          El nombre es requerido.
+        </small>
+      </div>
+  
+      <!-- Campo: Descripción -->
+      <div class="p-field">
+        <label for="description">Descripción</label>
+        <input
+          id="description"
+          type="text"
+          pInputText
+          formControlName="description"
+          placeholder="Ingrese una descripción del producto"
+          [ngClass]="{ 'p-invalid': productForm.get('description')?.invalid && productForm.get('description')?.touched }"
+        />
+        <small
+          *ngIf="productForm.get('description')?.invalid && productForm.get('description')?.touched"
+          class="p-error"
+        >
+          La descripción es requerida.
+        </small>
+      </div>
+  
+      <!-- Campo: Precio -->
+      <div class="p-field">
+        <label for="price">Precio</label>
+        <input
+          id="price"
+          type="number"
+          pInputText
+          formControlName="price"
+          placeholder="Ingrese el precio"
+          [ngClass]="{ 'p-invalid': productForm.get('price')?.invalid && productForm.get('price')?.touched }"
+        />
+        <small
+          *ngIf="productForm.get('price')?.invalid && productForm.get('price')?.touched"
+          class="p-error"
+        >
+          El precio es requerido y debe ser un número válido.
+        </small>
+      </div>
+  
+      <!-- Espacio para separar los campos de los botones -->
+      <div class="p-mb-6"></div>
+  
+      <!-- Botones de Acción -->
+      <div class="button-container">
+        <button
+          pButton
+          type="button"
+          label="Volver"
+          class="p-button-secondary"
+          (click)="onBack()"
+        ></button>
+        <button
+          pButton
+          type="submit"
+          label="Guardar"
+          class="p-button-success"
+          [disabled]="productForm.invalid"
+        ></button>
+      </div>
+    </form>
+</div>
